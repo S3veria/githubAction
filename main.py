@@ -50,7 +50,7 @@ def exploreAction(url, actionName, originalSize, coordinatesToClick):
     action.move_to_element_with_offset(body, resizedXCoordianate, resizedYCoordinate) #x and then y?
     action.click()
     action.perform()
-    imageName=url.replace("https://www.","").replace("http://www.","").replace("www.","").replace(".","_")
+    imageName=url.replace("https://","").replace("http://","").replace("www.","").replace(".","_")
     imageName=f'{imageName}[{actionName}].png'
     time.sleep(2)
     driver.save_screenshot(imageName)
